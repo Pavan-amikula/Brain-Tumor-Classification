@@ -6,6 +6,22 @@
 
 An academic computer vision project covering four MRI image classes: **glioma, meningioma, no tumor, and pituitary tumor**. The supplied code contains a weighted ensemble, InceptionV3 training/evaluation, DenseNet explanation utilities, and two Flask demos.
 
+## Pavan's documented contribution and project reports
+
+**Pavan Kumar Goud Amikula** is a named contributor and coauthor in the supplied academic reports.
+
+| Report | Context and authorship |
+| --- | --- |
+| [CNN architecture comparison](docs/reports/cnn-architecture-comparison.pdf) | Pavan implemented and trained **InceptionV3 and MobileNetV3**. Naga Sreerama Pradyumna Tata implemented EfficientNetB3 and DenseNet201; both jointly contributed preprocessing, evaluation, confusion matrix analysis, and writing. |
+| [Ensemble learning and explainable AI study](docs/reports/ensemble-explainable-ai-study.pdf) | Coauthored by Yashwanth Hudumula and Pavan Kumar Goud Amikula; investigates ensemble performance, class-level reliability, and Grad-CAM. |
+| [Major-project report](docs/reports/major-project-report.pdf) | Team report naming TNS Pradyumna, A Pavan Kumar Goud, H Yashwanth, and THS Chakradhar, supervised by Dr. M. Arathi. |
+
+The central problem is that high aggregate accuracy can conceal class-specific errors. The work compares architectures and their efficiency/reliability trade-offs, then explores ensembles and visual explanations. Pavan's documented implementation role is specifically established by the CNN comparison report; the other reports establish team membership or coauthorship without a separate task breakdown.
+
+The major-project title mentions segmentation, but its conclusion treats segmentation as future work. The repository's Grad-CAM utilities should not be presented as a completed, validated segmentation system.
+
+**Results context:** the major-project and ensemble-study PDFs report 99.01% ensemble accuracy. The code archive's saved summary reports 96.1098% on 1,311 images. These different historical artifacts are preserved separately; the reports do not replace the repository's saved evaluation evidence or establish a fresh reproduction.
+
 ## Architecture
 
 MRI image → architecture-specific preprocessing → DenseNet201 / EfficientNetB3 / InceptionV3 → weighted probabilities → class prediction.
@@ -50,4 +66,4 @@ For the primary local demo, set `BRAIN_TUMOR_MODEL` to a compatible DenseNet201 
 
 ## Attribution and scope
 
-Published here as a portfolio project from the supplied archive. Its original README identifies **Yashwanth Hudumula** as author; that attribution is preserved. This publication does not establish sole authorship or grant a new software license. Medical image uploads, image-level prediction records, caches, and model binaries are excluded. This is an educational classification project; clinical use has not been validated.
+Published here as a team portfolio project from the supplied archive and accompanying reports. Its original archive README identifies **Yashwanth Hudumula** as author; that source attribution is preserved. The reports additionally document Pavan's team membership, coauthorship, and specific CNN-comparison contribution above. This does not claim sole authorship or grant a new software license. Medical image uploads, image-level prediction records, caches, and model binaries are excluded. This is an educational classification project; clinical use has not been validated.
